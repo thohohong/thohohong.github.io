@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <!-- modal jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css">
+
+  <script type="text/javascript" src="index.js"></script>
+  <title>Username's Portfolio</title>
+</head>
+
+<body>
+  <div class="navigation">
+    <img src="img/icon.svg" alt="icon">
+    <button>INSTAGRAM</button>
+    <button>GITHUB</button>
+    <button>BLOG</button>
+  </div>
+
+  <div class="card" id="book1">
+    <div class="wrapper">
+      <div class="profile_pic">
+        <img src="img/profile.jpg" alt="profile_pic" width="400px">
+      </div>
+      <div class="contents">
+        <h1>황소영</h1>
+        <p>안녕하세요 황소영입니다!</p>
+        <p>내용은 두줄까지 입력하는게 제일 깔끔</p>
+        <div class="page">
+          <div class="text">
+            <p id="book1_desc">Description1</p>
+          </div>
+          <div class="arrow">
+            <img src="img/next.svg" alt="left-arrow" id="left-arrow">
+            <img src="img/next.svg" alt="right-arrow" id='right-arrow'>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card" id="book2">
+    <div class="wrapper">
+      <div class="title">
+        <h1>Title</h1>
+      </div>
+      <div class="card-container">
+        <div class="card-history">
+          <img src="img/temp.jpg" alt="history_pic">
+          <div class="text-box">
+            <h2>title</h2>
+            <p>Description</p>
+          </div>
+          <a href="modal/history1.html" rel="modal:open">
+          <button>자세히 보기</button></a>
+        </div>
+        <div class="card-history">
+          <img src="img/temp.jpg" alt="history_pic">
+          <div class="text-box">
+            <h2>title</h2>
+            <p>Description</p>
+          </div>
+          <a href="modal/history2.html" rel="modal:open">
+            <button>자세히 보기</button></a>
+        </div>
+        <div class="card-history">
+          <img src="img/temp.jpg" alt="history_pic">
+          <div class="text-box">
+            <h2>title</h2>
+            <p>Description</p>
+          </div>
+          <a href="modal/history3.html" rel="modal:open">
+          <button>자세히 보기</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card" id="book3">
+    <div class="wrapper">
+      <div class="title">
+        <h1>Title</h1>
+      </div>
+      <div class="article-container">
+        <div class="article">
+          <div class="article-img-container">
+            <img src="img/temp.jpg" alt="article_pic">
+          </div>
+          <div class="article-desc-container">
+            <div class="text-box">
+              <h2>title</h2>
+              <p>Description</p>
+            </div>
+            <button>자세히 보기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card" id="book4">
+    <div class="wrapper">
+      <div class="title">
+        <h1>Title</h1>
+      </div>
+      <div class="content">
+        <div class="move-pointer" id="to-left">
+          <img src="img/next.svg" alt="◀">
+        </div>
+        <div class="diary">
+          <div class="diary-pic">
+            <img src="img/temp.jpg" alt="diary_pic">
+          </div>
+          <div class="diary-text">
+            <h2>Title</h2>
+            <p>contents</p>
+          </div>
+        </div>
+        <div class="move-pointer" id="to-right">
+          <img src="img/next.svg" alt="▶">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
