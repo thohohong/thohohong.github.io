@@ -60,11 +60,7 @@ window.onload = function() {
             });
     }
 
-
-    // $("#diary_title").load("diary/diary1.html #title");
-    // $("#diary_text").load("diary/diary1.html #text");
-
-    $.get('/diary/diary1.html', replaceDiary);
+    replaceDiary('/diary/diary1.html')
 
     var diary_left_arrow = document.getElementById("diary_left_arrow");
     var diary_right_arrow = document.getElementById("diary_right_arrow");
@@ -74,26 +70,22 @@ window.onload = function() {
 }
 
 
-function replaceDiary(data){
-    var diary = $.parseHTML(data);
+function replaceDiary(filename){
+    $.get(filename, function(result){
+        var obj = $(result).find('h2');
+        document.getElementById("diary_title").innerText = obj.html();
+    });
 
-        var title = diary.find(function(data){
-            if (data.id === 'title') return true;
-        });
-        var text = diary.find(function(data){
-            if (data.id === 'text') return true;
-        });
-        var img = diary.find(function(data){
-            if (data.id === 'img') return true;
-        });
+    $.get(filename, function(result){
+        var obj = $(result).find('p');
+        document.getElementById("diary_text").innerText = obj.html();
+    });
 
-        var diary_title = document.getElementById("diary_title");
-        var diary_text = document.getElementById("diary_text");
-        var diary_img = document.getElementById("diary_img");
-
-        diary_title.innerText = title.innerText;
-        diary_text.innerText = text.innerText;
-        diary_img.src = img.src;
+    $.get(filename, function(result){
+        var obj = $(result).find('img');
+        console.log(obj[0].src);
+        document.getElementById("diary_img").src = obj[0].src;        
+    });
 }
 
 function diaryLeftClick(){
@@ -101,7 +93,7 @@ function diaryLeftClick(){
         diary_idx--;
         if (diary_idx < 1) diary_idx = diary_num ;
         var html = "/diary/diary" + diary_idx + ".html";
-        $.get(html, replaceDiary);
+        replaceDiary(html);
         $(this).fadeIn(500);
     });
 }
@@ -112,7 +104,7 @@ function diaryRightClick(){
         if (diary_idx > diary_num) diary_idx = 1;
         var html = "/diary/diary" + diary_idx + ".html";
 
-        $.get(html, replaceDiary);
+        replaceDiary(html);
         $(this).fadeIn(500);
     });
 }
