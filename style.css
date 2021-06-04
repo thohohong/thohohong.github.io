@@ -90,6 +90,10 @@ div.navigation {
     
     display: flex;
     flex-direction: row;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 div.navigation button {
@@ -244,6 +248,7 @@ div.card-history {
 }
 
 .article {
+    margin-top:20px;
     display: flex;
     flex-direction: row;
     background-color: white;
@@ -260,6 +265,16 @@ div.card-history {
     width: 350px;
     height: 215px;
     object-fit: cover;
+}
+
+.article-desc {
+    line-height: 160%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.article-desc br {
+    display: none;
 }
 
 .article-desc-container {
@@ -318,6 +333,58 @@ div.card-history {
     object-fit: cover;
 }
 
+.article-img {
+    width: fit-content;
+    height: fit-content;
+}
+
+.article-img #leftimg {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    /* border-bottom-left-radius: 20px; */
+}
+
+.article-img #rightimg {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    /* border-top-right-radius: 20px; */
+    border-bottom-right-radius: 20px;
+}
+
+.article-section {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+}
+
+.article-wrapper {
+    /* border: #303030 solid;
+    border-width: 1px; */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    box-shadow: 2px 1px 5px 0px #AAAAAA;
+}
+
+.article-subtitle {
+    border-bottom:#AAAAAA solid 1px;
+}
+
+.article-body {
+    padding-top:15px;
+}
+
+.article-text {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+}
+
 .diary-text {
     display: flex;
     flex-direction: column;
@@ -340,4 +407,77 @@ div.card-history {
 
 .move-pointer#to-left img{
     transform: scaleX(-1);
+}
+
+/* ============== contact ============ */
+#contact {
+    background-color: #d8e6fa;
+}
+#contact .wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact .content {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    align-self: center;
+}
+
+.contact-item {
+    padding: 100px 20px 100px 20px; /* up right down left */
+    width: 120px;
+}
+
+.contact-item img {
+    width: 90px;
+}
+
+.contact-item h6 {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+
+    color: black;
+}
+
+.contact-item a {
+    text-decoration-line: none;
+}
+
+
+
+#diary-modal {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #000000BB;
+
+    text-align: center;
+}
+
+#diary-modal-wrapper {
+    margin-top:150px;
+
+    display: inline-block;
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 6   00px;
+    background-color: #FFFFFF;
+    box-shadow: 2px 1px 5px 0px #000000;
+    border-radius: 15px;
+}
+
+#diary-modal-list {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom:5px;
+}
+
+p#diary-modal-list {
+    padding-top:5px;
+    padding-bottom:5px;
+    border-bottom:#AAAAAA solid 1px;
 }

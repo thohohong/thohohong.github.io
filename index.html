@@ -99,10 +99,62 @@
           </div>
           <div class="article-desc-container">
             <div class="text-box">
-              <h2>title</h2>
-              <p>Description</p>
+              <h2 id="article-title1">
+                  <script>
+                  $(function(){
+                      $.get('article/article1.html', function(result){
+                          var obj = $(result).find('h1');
+                          document.getElementById("article-title1").innerText = obj.html()
+                      });
+                  });
+                </script>
+              </h2>
+              <p id="article-desc1" class="article-desc">
+                <script>
+                $(function(){
+                    $.get('article/article1.html', function(result){
+                        var obj = $(result).find('p');
+                        document.getElementById("article-desc1").innerText = obj.html().substr(0,550) + "..."  
+                    });
+                });
+              </script>
+              </p>
             </div>
-            <button>자세히 보기</button>
+            <a href="article/article1.html">
+              <button>자세히 보기</button>
+            </a>
+          </div>
+        </div>
+        <div class="article">
+          <div class="article-img-container">
+            <img src="img/temp.jpg" alt="article_pic">
+          </div>
+          <div class="article-desc-container">
+            <div class="text-box">
+              <h2 id="article-title2">
+                  <script>
+                  $(function(){
+                      $.get('article/article2.html', function(result){
+                          var obj = $(result).find('h1');
+                          document.getElementById("article-title2").innerText = obj.html()
+                      });
+                  });
+                </script>
+              </h2>
+              <p id="article-desc2" class="article-desc">
+                <script>
+                $(function(){
+                    $.get('article/article2.html', function(result){
+                        var obj = $(result).find('p');
+                        document.getElementById("article-desc2").innerText = obj.html().substr(0,550) + "..."  
+                    });
+                });
+              </script>
+              </p>
+            </div>
+            <a href="article/article2.html">
+              <button>자세히 보기</button>
+            </a>
           </div>
         </div>
       </div>
@@ -117,19 +169,47 @@
       </div>
       <div class="content">
         <div class="move-pointer" id="to-left">
-          <img src="img/next.svg" alt="◀">
+          <img src="img/next.svg" alt="◀" id="diary_left_arrow">
         </div>
         <div class="diary">
           <div class="diary-pic">
-            <img src="img/temp.jpg" alt="diary_pic">
+            <img src="img/temp.jpg" alt="diary_pic" id="diary_img">
           </div>
           <div class="diary-text">
-            <h2>Title</h2>
-            <p>contents</p>
+            <h2 id="diary_title">Title</h2>
+            <p id="diary_text">contents</p>
           </div>
         </div>
         <div class="move-pointer" id="to-right">
-          <img src="img/next.svg" alt="▶">
+          <img src="img/next.svg" alt="▶" id="diary_right_arrow">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="contact">
+    <div class="wrapper">
+      <div class="title">
+        <h1>Contact.</h1>
+      </div>
+      <div class="content">
+        <div class="contact-item">
+          <a href="mailto:so0426yeon@gmail.com">
+            <img src="/img/email.svg" alt="instagram-pic" width="100px">
+            <h6>e-mail</h6>
+          </a>
+        </div>
+        <div class="contact-item">
+          <a href="https://www.facebook.com/">
+            <img src="/img/facebook.svg" alt="instagram-pic" width="100px">
+            <h6>facebook</h6>
+          </a>
+        </div>
+        <div class="contact-item">
+          <a href="https://twitter.com">
+            <img src="/img/twitter.png" alt="instagram-pic" width="100px">
+            <h6>twitter</h6>
+          </a>
         </div>
       </div>
     </div>
