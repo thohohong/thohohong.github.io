@@ -37,7 +37,7 @@ keywords:              []
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                  ../assets/img/logo.png
+logo:                  https://github.com/thohohong/thohohong.github.io/blob/main/assets/img/blog/logo.png?raw=true
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
@@ -49,8 +49,8 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             Coding
-    url:               /coding/
+  - title:             Code
+    url:               /code/
   - title:             Daily
     url:               /daily/
   - title:             Insight
@@ -80,7 +80,7 @@ paginate_path:         /:num/
 # Theme
 # ---------------------------------------------------------------------------------------
 
-#theme: jekyll-theme-hydejack
+theme: jekyll-theme-hydejack
 remote_theme: hydecorp/hydejack@v9
 
 
@@ -88,8 +88,8 @@ remote_theme: hydecorp/hydejack@v9
 # ----------------------------------------------------------------------------------------
  
 # Sidebar image and theme color of the site.
-accent_image:          ../assets/img/sidebar-bg.jpg
-accent_color:          rgb(79,177,186)
+accent_image:          https://github.com/thohohong/thohohong.github.io/blob/main/assets/img/blog/sidebar-bg.jpg?raw=true
+accent_color:          rgb(41,121,253)
 
 # This is used for the `theme-color` meta tag,
 # which changes the background color of the browser UI in certain browsers.
