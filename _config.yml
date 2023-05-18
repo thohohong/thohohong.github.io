@@ -88,7 +88,8 @@ remote_theme: hydecorp/hydejack@v9
 # ----------------------------------------------------------------------------------------
  
 # Sidebar image and theme color of the site.
-accent_image:          https://github.com/thohohong/thohohong.github.io/blob/main/assets/img/blog/sidebar-bg.jpg?raw=true
+#accent_image:          https://github.com/thohohong/thohohong.github.io/blob/main/assets/img/blog/sidebar-bg.jpg?raw=true
+accent_image:          ../assets/img/sidebar-bg.jpg
 accent_color:          rgb(41,121,253)
 
 # This is used for the `theme-color` meta tag,
@@ -403,21 +404,21 @@ jekyll_compose:
         A short ~160 character description of your post for search engines,
         social media previews, etc.
       image:
-        path: /assets/img/sidebar-bg.jpg
+        path: ../assets/img/sidebar-bg.jpg
     posts:
       layout: post
       description: > 
         A short ~160 character description of your post for search engines,
         social media previews, etc.
       image:
-        path: /assets/img/sidebar-bg.jpg
+        path: ../assets/img/sidebar-bg.jpg
     projects:
       layout: project
       description: > 
         A short ~160 character description of your post for search engines,
         social media previews, etc.
       image:
-        path: /assets/img/sidebar-bg.jpg
+        path: ../assets/img/sidebar-bg.jpg
       links:
         - title: Project Link
           url: https://example.com
